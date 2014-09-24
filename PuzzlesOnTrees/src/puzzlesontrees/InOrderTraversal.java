@@ -11,16 +11,22 @@ package puzzlesontrees;
  */
 public class InOrderTraversal {
 
+    /**
+     * Prints the inorder traversal of a tree.
+     *
+     * @param t1
+     */
     public static void printInOrderTraversal(BinaryTree t1) {
         if (t1 == null) {
             return;
         }
         printInOrderTraversal(t1.getLeftChild());
-        System.out.print("" + t1.getData()+"    ");
+        System.out.print("" + t1.getData() + "    ");
         printInOrderTraversal(t1.getRightChild());
     }
+
     public static void main(String[] args) {
-        MainClass obj=new MainClass();
+        MainClass obj = new MainClass();
         printInOrderTraversal(obj.getSampleBinaryTree());
     }
 }

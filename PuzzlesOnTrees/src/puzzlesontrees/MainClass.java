@@ -12,10 +12,24 @@ package puzzlesontrees;
  */
 public class MainClass<V> {
 
+    /**
+     * Creates a node object with <tt>data</tt> as its value and its left and
+     * right pointers are null.
+     *
+     * @param data
+     * @return
+     */
     public BinaryTree<V> createNode(V data) {
         return new BinaryTree<>(data);
     }
-      public  BinaryTree<V> getSampleBinaryTree() {
+
+    /**
+     * Creates a sample binary tree whose inorder traversal is 50 20 70 60 10 40
+     * 30 80
+     *
+     * @return
+     */
+    public BinaryTree<V> getSampleBinaryTree() {
         //<editor-fold defaultstate="collapsed" desc="Tree1">
         MainClass obj = new MainClass();
         BinaryTree root1 = obj.createNode("10");
@@ -31,7 +45,7 @@ public class MainClass<V> {
         _20.setRightChild(_60);
         _30.setLeftChild(_40);
         _30.setRightChild(_80);
-        
+
         root1.setLeftChild(_20);
         root1.setRightChild(_30);
 //</editor-fold>
